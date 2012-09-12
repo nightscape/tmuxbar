@@ -1,2 +1,4 @@
-class TmuxProgressBar
+require "fuubar"
+
+class TmuxProgressBar < Fuubar
 end
