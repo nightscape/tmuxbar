@@ -15,5 +15,11 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Rspec::Formatter::Tmux::VERSION
 
-  gem.add_dependency('rspec')
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'guard-rspec'
+  gem.add_development_dependency 'rb-fsevent'
+  gem.add_development_dependency 'listen', ["~> 0.4.7"]
+
+  gem.add_dependency 'rspec'
+  gem.add_dependency 'fuubar'
 end
