@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.version       = "0.0.1"
 
   gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'tmux'
   gem.add_development_dependency 'guard-rspec'
   gem.add_development_dependency 'rb-fsevent'
   gem.add_development_dependency 'listen', ["~> 0.4.7"]
