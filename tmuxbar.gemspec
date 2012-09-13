@@ -1,19 +1,18 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/rspec-formatter-tmux/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Juan Ibiapina"]
   gem.email         = ["juanibiapina@gmail.com"]
   gem.description   = %q{RSpec formatter for tmux progress bar}
   gem.summary       = %q{RSpec formatter for tmux progress bar}
-  gem.homepage      = "https://github.com/juanibiapina/rspec-formatter-tmux"
+  gem.homepage      = "https://github.com/juanibiapina/tmuxbar"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "rspec-formatter-tmux"
+  gem.name          = "tmuxbar"
   gem.require_paths = ["lib"]
-  gem.version       = Rspec::Formatter::Tmux::VERSION
+  gem.version       = "0.0.1"
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'guard-rspec'
@@ -22,4 +21,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'rspec'
   gem.add_dependency 'fuubar'
+  gem.add_dependency 'tmux'
 end

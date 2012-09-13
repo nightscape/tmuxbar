@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe TmuxProgressBar do
+describe Tmuxbar do
   let(:output) { StringIO.new }
-  subject { TmuxProgressBar.new(output) }
+  subject { Tmuxbar.new(output) }
 
   it 'should inherit from Fuubar' do
     subject.class.superclass.should == Fuubar

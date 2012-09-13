@@ -1,1 +1,1 @@
-require "rspec-formatter-tmux"
+require "tmuxbar"
