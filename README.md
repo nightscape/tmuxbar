@@ -24,4 +24,4 @@ The progress bar should appear on the current attached session.
 
 ## Under the hood
 
-Tmuxbar is just a wrapper over [Fuubar](https://github.com/jeffkreeftmeijer/fuubar) that uses tmux-ruby to display the progress bar widget. It doesn't actually notify you of passing or failing tests. For that I use [guard](https://github.com/guard/guard) and [terminal-notifier-guard](https://github.com/alloy/terminal-notifier).
+Tmuxbar is just a wrapper over [Fuubar](https://github.com/jeffkreeftmeijer/fuubar) that uses tmux-ruby to display the progress bar widget. It doesn't actually notify you of passing or failing tests. For that I use [guard](https://github.com/guard/guard) and [terminal-notifier-guard](https://github.com/Springest/terminal-notifier-guard).
