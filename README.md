@@ -2,7 +2,7 @@
 
 Formatter for RSpec that shows a progress bar in tmux.
 
-[Screenshot](https://github.com/juanibiapina/tmuxbar/raw/master/screnshots/progress-bar.png)
+![Screenshot](https://raw.github.com/juanibiapina/tmuxbar/master/screenshots/progress-bar.png)
 
 ## Installation
 
