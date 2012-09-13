@@ -2,6 +2,8 @@
 
 Formatter for RSpec that shows a progress bar in tmux.
 
+[Screenshot](https://github.com/juanibiapina/tmuxbar/raw/master/screnshots/progress-bar.png)
+
 ## Installation
 
 Add this line to your application's Gemfile:
