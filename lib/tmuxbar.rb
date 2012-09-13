@@ -36,7 +36,7 @@ class Tmuxbar < Fuubar
 
   def init_bar(size)
     server = Tmux::Server.new
-    @session = server.session
+    @session = server.sessions(attached: true).first
 
     @bar = Tmux::Widgets::ProgressBar.new("RSpec")
     @bar.total = size
