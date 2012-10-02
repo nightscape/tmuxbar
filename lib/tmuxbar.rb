@@ -1,8 +1,8 @@
-require "fuubar"
+require 'rspec/core/formatters/base_text_formatter'
 require "tmux"
 require "tmux/widgets/progress_bar"
 
-class Tmuxbar < Fuubar
+class Tmuxbar < RSpec::Core::Formatters::BaseTextFormatter
   def start(example_count)
     super
     init_bar example_count
@@ -26,6 +26,18 @@ class Tmuxbar < Fuubar
   def example_failed(example)
     super
     increment_bar
+  end
+
+  def dump_summary(duration, example_count, failure_count, pending_count)
+  end
+
+  def dump_pending()
+  end
+
+  def dump_failures()
+  end
+
+  def message(message)
   end
 
   private

@@ -21,6 +21,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'listen', ["~> 0.4.7"]
 
   gem.add_dependency 'rspec'
-  gem.add_dependency 'fuubar'
   gem.add_dependency 'tmux'
 end
