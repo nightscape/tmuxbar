@@ -10,7 +10,7 @@ class Tmuxbar < RSpec::Core::Formatters::BaseTextFormatter
 
   def stop
     super
-    @session.status_bar.right.pop_widget(@bar)
+    @session.status_bar.right.pop_widget(@bar) if @session
   end
 
   def example_passed(example)
@@ -43,15 +43,16 @@ class Tmuxbar < RSpec::Core::Formatters::BaseTextFormatter
   private
 
   def increment_bar
-    @bar.value += 1
+    @bar.value += 1 if @bar
   end
 
   def init_bar(size)
     server = Tmux::Server.new
-    @session = server.sessions(attached: true).first
+    if (@session = server.sessions(attached: true).first)
 
-    @bar = Tmux::Widgets::ProgressBar.new("RSpec")
-    @bar.total = size
-    @session.status_bar.right.add_widget(@bar)
+      @bar = Tmux::Widgets::ProgressBar.new("RSpec")
+      @bar.total = size
+      @session.status_bar.right.add_widget(@bar)
+    end
   end
 end
