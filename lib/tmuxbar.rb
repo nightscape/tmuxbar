@@ -49,7 +49,7 @@ class Tmuxbar < RSpec::Core::Formatters::BaseTextFormatter
   end
 
   def background=(color)
-    @bar.field.background_color = color
+    @bar.field.background_color = color if @bar
   end
 
   def init_bar(size)
