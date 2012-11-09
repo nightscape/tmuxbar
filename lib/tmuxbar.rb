@@ -6,6 +6,7 @@ class Tmuxbar < RSpec::Core::Formatters::BaseTextFormatter
   def start(example_count)
     super
     init_bar example_count
+    self.background = :green
   end
 
   def stop
@@ -25,6 +26,7 @@ class Tmuxbar < RSpec::Core::Formatters::BaseTextFormatter
 
   def example_failed(example)
     super
+    self.background = :red
     increment_bar
   end
 
@@ -44,6 +46,10 @@ class Tmuxbar < RSpec::Core::Formatters::BaseTextFormatter
 
   def increment_bar
     @bar.value += 1 if @bar
+  end
+
+  def background=(color)
+    @bar.field.background_color = color
   end
 
   def init_bar(size)
